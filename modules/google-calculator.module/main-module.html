@@ -1,0 +1,13 @@
+{% set instance_id =name %}
+<div id="hs-google-calculator">
+  <script
+    type="application/json"
+    data-module-instance="{{ instance_id }}"
+    data-portal-id="{{ portal_id }}"
+  >
+    {{ module|tojson }}
+  </script>
+  <div id="google--{{ instance_id }}"></div>
+</div>
+
+<%= htmlWebpackPlugin.options.partial %>
